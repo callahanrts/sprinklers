@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Sprinklers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-xs-12">
+        <h1>Sprinklers</h1>
+
+
+          <div class="col-xs-6">
+
+            <div class="form-group">
+              <label for="zone">Zone: </label>
+              <select id="zone" class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-xs-6">
+            <div class="form-group">
+              <label for="dur">Duration: </label>
+              <select id="dur" class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>10</option>
+                <option>15</option>
+                <option>20</option>
+                <option>25</option>
+                <option>30</option>
+              </select>
+            </div>
+          </div>
+
+
+          <div class="col-xs-12">
+            <div class="form-group">
+	      <button class="btn btn-primary form-control" onclick="zoneOn()">On </button>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+    <script>
+    (function(){
+
+      window.zoneOn = function(){
+        var zone = $("#zone").val();
+        var dur = $("#dur").val() || 3;
+        console.log(`Zone ${zone} on`);
+        $.get("/on", { zone: zone, duration: dur }).done(function(data){
+          console.log(data);
+          alert(`Zone ${zone} turned on for ${dur} minutes!`);
+        });
+      }
+
+    })()
+    </script>
+
+  </body>
+</html>

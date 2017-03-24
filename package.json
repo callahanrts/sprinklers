@@ -1,0 +1,17 @@
+{
+  "name": "sprinklers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "forever index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pins": "node pins.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "node-schedule": "^1.2.1"
+  }
+}
