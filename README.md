@@ -1,5 +1,5 @@
 # Sprinklers
-A simple webserver I use to manage my irrigation system.
+A simple webserver I use to manage my irrigation system. [Read more](https://codycallahan.com/projects/sprinklers)
 
 <table>
   <tr>
