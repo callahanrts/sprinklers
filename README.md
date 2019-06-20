@@ -1,6 +1,17 @@
 # Sprinklers
 A simple webserver I use to manage my irrigation system.
 
+<table>
+  <tr>
+    <td>
+      <img src="https://codycallahan.com/assets/projects/sprinklers-2.jpg" />
+    </td>
+    <td>
+      <img src="https://codycallahan.com/assets/projects/sprinklers.png" />
+    </td>
+  </tr>
+</table>
+
 # Strategy
 
 - [Watering](https://github.com/callahanrts/sprinklers/wiki/Watering)
